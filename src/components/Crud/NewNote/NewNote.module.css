@@ -1,0 +1,47 @@
+.form {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.newnotes {
+  display: flex;
+  grid-area: footer;
+  flex-direction: column;
+  border-radius: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.newnotes span {
+  padding: 15px;
+}
+
+.btnSend {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  right: 0;
+  background-color: inherit;
+}
+
+.button {
+  text-align: right;
+}
+
+textarea {
+  border: none;
+  border-radius: 10px;
+  height: 5rem;
+  resize: none;
+  overflow: hidden;
+}
+
+textarea:focus {
+  outline: none;
+}

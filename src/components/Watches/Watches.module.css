@@ -1,0 +1,92 @@
+.container {
+  margin-top: 5rem;
+  background-color: #dbdbdb;
+  /* border-radius: 15px; */
+  /* display: flex; */
+  /* height: 50vh; */
+  /* text-align: center; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  width: 600px;
+}
+
+.colorHEX,
+.colorRGB {
+  height: 50px;
+  width: 170px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.colorHEX {
+  color: black;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+
+.backdround {
+  background-color: black;
+  opacity: 0.3;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.colorRGB {
+  color: white;
+  position: relative;
+  z-index: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.city,
+.timeZone {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.inputCity, 
+.inputTimeZone {
+  background-color: white;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  margin-right: 5px;
+  padding-left: 10px;
+  height: 40px;
+  border: none;
+}
+
+.inputBtn {
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  padding: 0 25px;
+  margin: 5px 0;
+  margin-right: 5px;
+  height: 42px;
+  border: none;
+}
+
+.setWatch {
+  gap: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* width: 40%; */
+  margin-top: 25px;
+}

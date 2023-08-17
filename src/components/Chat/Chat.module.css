@@ -1,0 +1,61 @@
+.container {
+  margin-top: 5rem;
+  /* width: 80%; */
+}
+
+.inputText,
+.inputDate {
+
+  background-color: white;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  margin-right: 5px;
+  padding-left: 10px;
+  height: 40px;
+  border: none;
+}
+
+.inputBtn {
+  background-color: greenyellow;
+  border-radius: 5px;
+  padding: 0 25px;
+  margin: 5px 0;
+  margin-right: 5px;
+  height: 42px;
+  border: none;
+
+}
+
+.form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.title {
+  display: flex;
+  /* width: 100%; */
+  font-size: 13px;
+  text-align: left;
+  /* border-radius: 5px; */
+  /* text-align: center; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  /* margin: 5px 0; */
+  padding: 15px 0;
+}
+
+.title span:first-child {
+  margin-right: 25px;
+}
+
+.title span:last-child {
+  margin-left: 90px;
+}

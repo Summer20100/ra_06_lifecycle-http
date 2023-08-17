@@ -1,0 +1,25 @@
+.watches {
+  border: 1px solid black;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.close {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: #dbdbdb;
+  border-radius: 15px;
+}
+
+.city {
+  border-bottom: 1px solid black;
+}
+
+.watch {
+  margin-top: 20px;
+}
