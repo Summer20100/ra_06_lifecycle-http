@@ -71,7 +71,7 @@ const Chat = () => {
 
   return (
     <Routes>
-      <Route path='*' element={
+      <Route path='/chat' element={
         <div className={s.container}>
           <div className={ s.messages }>
             <div className={ s.myMessage }>
