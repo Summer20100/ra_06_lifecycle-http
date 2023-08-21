@@ -43,7 +43,7 @@ const Watches = () => {
             <div className={s.timeZone}>
               <label htmlFor='timeZone' style={{fontSize: '13px', padding: '15px 0'}}> Временная зона </label>
               <select className={s.inputTimeZone} id='timeZone' value={valTimeZone} onChange={(ev) => onTimeZone(ev.target.value)} >
-                {timeZone.map((el) => <option value={el}>{el}</option>)}
+                {timeZone.map((el) => <option key={(prev) => prev + 1} value={el}>{el}</option>)}
               </select>
             </div>
             <input className={s.inputBtn} type='button' value='Добавить' onClick={onList} />

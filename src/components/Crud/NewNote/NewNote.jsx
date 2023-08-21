@@ -2,7 +2,7 @@ import s from './NewNote.module.css'
 import SendIcon from '@mui/icons-material/Send';
 
 
-const NewNote = ({ getApi, onNewText, newText, handleSubmit }) => {
+const NewNote = ({ getApi, onNewText, newText, handleSubmit, onClick }) => {
   return (
     <div className={ s.newnotes }>
       <span>NewNote</span>
@@ -14,7 +14,7 @@ const NewNote = ({ getApi, onNewText, newText, handleSubmit }) => {
       // onKeyPress={(ev) => ev.key === 'Enter' ? handleSubmit(ev) : onNewText(ev) }
         />
         <div className={ s.button }>
-          <button type='submit' className={ s.btnSend } onChange={(ev) => onNewText(ev) }>
+          <button type='submit' className={ s.btnSend } onChange={(ev) => onNewText(ev)} onClick={(ev) => onClick(new Date().getTime())}>
             <SendIcon />
           </button>
         </div>

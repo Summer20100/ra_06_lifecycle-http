@@ -9,22 +9,20 @@ import NewNote from './NewNote/NewNote'
 
 const Crud = () => {
   const [list, setList] = useState([])
-
   const [dataPostApi, setDataPostApi] = useState([])
+  const [newText, setNewText] = useState()
+  const [status, setStatus] = useState()
 
-  const onAdd = () => {
+  const onUpDate = (ev) => {
     getApi()
   }
-
-  const [newText, setNewText] = useState()
 
   const onNewText = (ev) => {
     setList((list) => ({
       ...list,
-      
       userId: new Date().getTime(), 
       content: ev.target.value 
-    })    )
+    }))
     setNewText(ev.target.value)
   }
 
@@ -32,14 +30,12 @@ const Crud = () => {
     ev.preventDefault()
     postApi()
     setNewText('')
+    setList('')
   }
 
-  useEffect(() => {
-    getApi()
-  }, [dataPostApi])
-
-  const onUpDate = (ev) => {
-    getApi()
+  const onClick = (val) => {
+    setStatus(val)
+    console.log(status)
   }
 
   const baseUrl = 'http://localhost:7070'
@@ -58,11 +54,14 @@ const Crud = () => {
         throw new Error('Какая то фигня с сервером')
       })
   }
-
+  useEffect(() => {
+    getApi()
+    console.log('qwerty')
+  }, [dataPostApi])
 
   // POST API
   const postApi = () => {
-    fetch(baseUrl + '/notes', {
+    newText && fetch(baseUrl + '/notes', {
       method: 'POST', 
       body: JSON.stringify({
         userId: list.userId,
@@ -73,22 +72,22 @@ const Crud = () => {
       },
     })
       .then((response) => response.json())
-      .then((data) => { setDataPostApi(data) }
-            )
+      .then((data) => setDataPostApi(data) )
       .catch((err) => {
         console.log(err)
       })
+      getApi()
   }
-
   
   // DELETE API
-  const onClose = (id, userId) => {
+  const onClose = (id) => {
     fetch(baseUrl + '/notes/' + id, {
       method: 'DELETE'
       })
     .catch((err) => {
       console.log(err)
     })
+    getApi()
   }
 
   return (
@@ -106,9 +105,9 @@ const Crud = () => {
             </div>
           </div>
           <div className={s.cards}>
-            {dataPostApi.map((itm) => <Card content={itm.content} userId={itm.userId} id={itm.id} onClose={onClose} />)}
+            {dataPostApi.map((itm) => <Card content={itm.content} userId={itm.userId} key={itm.id} id={itm.id} onClose={onClose} />)}
           </div>
-          <NewNote getApi={getApi} onNewText={onNewText} newText={newText} handleSubmit={ handleSubmit }/>
+          <NewNote getApi={getApi} onNewText={onNewText} newText={newText} handleSubmit={ handleSubmit } onClick={onClick}/>
         </div>
       } />
     </Routes>

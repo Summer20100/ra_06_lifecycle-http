@@ -3,9 +3,7 @@
   /* width: 80%; */
 }
 
-.inputText,
-.inputDate {
-
+.inputText {
   background-color: white;
   border-radius: 5px;
   align-items: center;
@@ -15,17 +13,58 @@
   padding-left: 10px;
   height: 40px;
   border: none;
+  width: 360px;
+  padding-right: 45px;
 }
 
-.inputBtn {
-  background-color: greenyellow;
-  border-radius: 5px;
-  padding: 0 25px;
+.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   margin: 5px 0;
-  margin-right: 5px;
-  height: 42px;
-  border: none;
+}
 
+.myMessage,
+.otherMessage {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  /* align-items: center; */
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 10px;
+  width: 80%;
+}
+
+.form {
+  position: relative;
+}
+
+.myMessage {
+  text-align: right;
+  align-self: flex-end;
+  background-color: #b7ffa3;
+}
+
+.otherMessage {
+  text-align: left;
+  align-self: flex-start;
+  background-color: #fdafaf;
+}
+
+
+.btnSend {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 0;
+  background-color: inherit;
+  color: green;
+  border: none;
+  top: calc(50% - 40px/2);
+  margin-right: 5px;
 }
 
 .form {
